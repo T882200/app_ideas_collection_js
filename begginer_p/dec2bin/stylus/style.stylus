@@ -1,0 +1,94 @@
+*, *:before, *:after
+  box-sizing border-box 
+  
+html, body
+  position relative
+  width 100%
+  height 100%
+  font-size 10px
+  font-family Arial, sans-serif
+  
+sub
+  vertical-align sub
+  font-style smaller
+  
+#dec-to-bin
+  position absolute
+  display inline-block
+  width 50%
+  height 100%
+  border 1px solid #4D4D4D
+  
+  & .container
+    position relative
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+  
+  & .input-container
+    position relative
+    display inline-block
+    left 50%
+    transform translateX(-50%)
+    
+  & h1
+    font-size 3.6rem
+    font-family 'Oswald', sans-serif
+    color #3B3B3B
+    margin 2rem
+    text-align center
+    
+  & input
+    max-width 20rem
+    font-size 2.6rem
+    color #4D4D4D
+    text-align right
+    border 0
+    border-radius 5px
+    outline none
+    transition all 300ms
+    padding .5rem
+    margin .5rem
+    box-shadow 0 0 2px rgba(0, 0, 0, .7)
+    
+    &:focus
+      box-shadow 0 0 7px rgba(0, 0, 0, .7)
+      
+  & sub
+    color #4D4D4D
+    font-size 1.6rem
+    font-weight bolder
+    
+  & .result
+    display inline-block
+    width 20rem
+    margin-left auto
+    margin-right auto
+    font-size 2.6rem
+    padding .5rem
+    margin .5rem
+    overflow-y auto
+    word-wrap break-word
+    border-radius 5px
+    text-align right
+    color #4D4D4D
+    border-bottom 1px solid #4D4D4D
+    
+    &:before
+      content "=> "
+      float left
+  
+  & .warn
+    margin 1rem 0 1rem 0
+    border-radius 5px
+    background-color #E38888
+      
+    & span
+      display block
+      padding 1rem
+      font-size 1.6rem
+      color #fff
+      
+#bin-to-dec
+  @extends #dec-to-bin
+  right 0

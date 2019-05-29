@@ -1,0 +1,110 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+}
+sub {
+  vertical-align: sub;
+  font-style: smaller;
+}
+#dec-to-bin,
+#bin-to-dec {
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #4d4d4d;
+}
+#dec-to-bin .container,
+#bin-to-dec .container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#dec-to-bin .input-container,
+#bin-to-dec .input-container {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#dec-to-bin h1,
+#bin-to-dec h1 {
+  font-size: 3.6rem;
+  font-family: 'Oswald', sans-serif;
+  color: #3b3b3b;
+  margin: 2rem;
+  text-align: center;
+}
+#dec-to-bin input,
+#bin-to-dec input {
+  max-width: 20rem;
+  font-size: 2.6rem;
+  color: #4d4d4d;
+  text-align: right;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  transition: all 300ms;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+#dec-to-bin input:focus,
+#bin-to-dec input:focus {
+  box-shadow: 0 0 7px rgba(0,0,0,0.7);
+}
+#dec-to-bin sub,
+#bin-to-dec sub {
+  color: #4d4d4d;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+#dec-to-bin .result,
+#bin-to-dec .result {
+  display: inline-block;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.6rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  overflow-y: auto;
+  word-wrap: break-word;
+  border-radius: 5px;
+  text-align: right;
+  color: #4d4d4d;
+  border-bottom: 1px solid #4d4d4d;
+}
+#dec-to-bin .result:before,
+#bin-to-dec .result:before {
+  content: "=> ";
+  float: left;
+}
+#dec-to-bin .warn,
+#bin-to-dec .warn {
+  margin: 1rem 0 1rem 0;
+  border-radius: 5px;
+  background-color: #e38888;
+}
+#dec-to-bin .warn span,
+#bin-to-dec .warn span {
+  display: block;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+#bin-to-dec {
+  right: 0;
+}
